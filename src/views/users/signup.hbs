@@ -1,0 +1,37 @@
+<div class="row carta">
+    <div class="">
+        <div class="titulo">
+            <h1>Drako</h1>
+            <span>Registro de ingresos</span>
+        </div>
+        <div class="col-m-4 mx-auto" style="width: 18rem;">
+            <div class="ms-5">
+            <div class="ms-2">
+                <p>Nuevo usuario</p>
+            </div>
+            <div class="card p-3" >
+                <form action="/users/signup" method="post" >
+                <div>
+                <input type="text" class="mb-3 input" placeholder="Username" autofocus name="name">
+                </div>
+                <div>
+                <input type="text" class="mb-3 input" placeholder="E-mail" name="email">
+                </div>
+                <div>
+                <input type="password" class="mb-3 input" placeholder="Password" name="password">
+                </div>
+                <div>
+                <input type="password" class="mb-3 input" placeholder="Confirm password" name="confirm_password">
+                </div>
+                <div >
+                <button type="submit" class="boton badge rounded-pill mb-3 px-3">Sign up</button>
+                </div>
+                </form>
+                <div>
+                    <p>¿Ya tiene cuenta?<a href="/users/signin">Ingrese</a></p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

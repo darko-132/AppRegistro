@@ -1,0 +1,28 @@
+{{#each errors }}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{text}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/each}}
+<div class="col-md-4 mx-auto">
+    <div class="card">
+    <div class="card-header">
+        <h3>Editar ingreso</h3>
+    </div>
+    <div class="card-body">
+        <form action="/dinero/actualizar-dinero/{{ingreso._id}}?_method=PUT" method="post">
+        <input type="hidden" name="_method" value="put">
+            <div class="form-group">
+                <input type="number"  name="dinero" class="form-control" placeholder="Dinero a ingresar" value="{{ingreso.dinero}}">
+            </div>
+            <div class="form-group mt-2">
+                <textarea name="description" class="form-control" placeholder="Description" value="{{ingreso.Description}}"></textarea>
+            </div>
+            <div class="form-group mt-2">
+                <button class="btn btn-primary btn-block" type="submit">Guardar</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+</div>

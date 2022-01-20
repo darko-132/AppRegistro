@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%);}
+
+.text-footer{
+    margin-top: 14vmax;
+    height: 40px;
+    color: white;
+}
+.text-footer a{
+    text-decoration: none;
+    color: white;
+}
+.notas{
+    height: 20% !important;
+}
+
+.boton{
+    color: black !important;
+}
+.input{
+    border-top:0;
+    border-left:0;
+    border-right:0;
+    outline: none;
+}
+.titulo{
+    text-align: center;
+    margin-bottom: 5%;
+}
