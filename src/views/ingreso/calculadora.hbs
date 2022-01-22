@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="css/style.css">
+<div class="box">
+<div id="wrapper" class="Btc">
+    <h1>1 bitcoin igual a:</h1>
+    <div id="btc"></div>
+</div>
+
+    <div class="calculadora">
+      <!-- valor de valor1 en bolibares -->
+    <input type="number" id="bss" placeholder="tasa del dia">
+    <!-- input1 con las difentes monedas -->
+    <div class="input1">
+        <input type="number" id="valor1" value=1 onchange="input1();"> 
+        <select  id="coin"  value="BTC">
+          <option value="BTC">BTC</option>
+          <option value="USD">USD</option>
+          <option value="BsS">BsS</option>       
+      </select>
+    </div>
+    <!-- input2 con las difentes monedas -->
+    <div class="input2">
+          <input type="number" id="valor2" value=1 onchange="input2();"> 
+          <select  id="coin2"  value="USD">
+            <option value="BTC">BTC</option>
+            <option value="USD">USD</option>
+            <option value="BsS">BsS</option>  </select>
+        </div>
+    </div>
+</div>
+<script src="js/calculadora.js"></script>

@@ -1,0 +1,71 @@
+
+.box{
+    
+    background-color: #a8a4a4;
+    opacity: 0.5;
+    width: 60%;
+    border-radius: 0.6rem;
+    margin: auto;
+    margin-top: 200px;
+    padding: 10px;
+}
+.valor1{
+    margin: 10px;
+    
+}
+
+.Btc h1{
+    font-size: 1rem;
+    text-align: center;
+}
+.valor1{
+    display: flex;
+}
+#btc{
+    text-align: center;
+    font-size: 30px;
+}
+input{
+margin: 10px;
+border:0;
+border-radius: 12px;
+width: 50%;
+outline: none;
+padding: 4px 12px;
+}
+#coin, #coin2{
+    width: 66px;
+    border-radius: 12px;
+    padding: 4px;
+}
+.calculadora{
+    text-align: center;
+}
+#bss{
+    text-align: center;
+    width: 30%;
+}
+
+@media only screen and (max-width: 586px) {
+    /* For mobile phones: */
+    .box{
+      width: 90%;
+    }
+
+    input{
+        margin: 3px;
+        border:0;
+        border-radius: 12px;
+        width: 60%;
+        outline: none;
+        padding: 4px;
+        padding-left: 5px;
+        }
+        #coin, #coin2{
+            width: 60px;
+        }
+    #btc{
+        text-align: center;
+        font-size: 30px;
+    }
+  }
