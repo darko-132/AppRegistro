@@ -1,5 +1,4 @@
-//manejo de api
-var currentPrice = new XMLHttpRequest();
+const currentPrice = new XMLHttpRequest;
 currentPrice.open('GET', 'https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=true', true);
 currentPrice.onreadystatechange = function(){
     if(currentPrice.readyState == 4){
@@ -8,8 +7,24 @@ currentPrice.onreadystatechange = function(){
       var price = ticker.market_data.current_price['usd'];
       document.getElementById('btc').innerHTML = "$ " + price;   
     };
-    
   };
+
+const API_URL_dolar = 'https://s3.amazonaws.com/dolartoday/data.json';
+const xml = new XMLHttpRequest;
+function onRequestHandler(){
+  if(this.readyState == 4){
+    const data = JSON.parse(this.response)
+    const priceUSD = data.USD.sicad1
+    var tasa = document.getElementById('bss').value=priceUSD;
+    console.log(priceUSD)
+  }
+}
+xml.addEventListener('load', onRequestHandler);
+xml.open('GET', API_URL_dolar);
+xml.send();
+  
+   
+    
   // entrada input 1 con salida en input 2
   function input1(){
   var ticker = JSON.parse(currentPrice.responseText);
