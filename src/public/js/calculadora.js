@@ -16,7 +16,7 @@ function onRequestHandler(){
     const data = JSON.parse(this.response)
     const priceUSD = data.USD.sicad1
     var tasa = document.getElementById('bss').value=priceUSD;
-    console.log(priceUSD)
+    document.getElementById('vusd').innerHTML = '1 $'+'=' + tasa + 'Bs';
   }
 }
 xml.addEventListener('load', onRequestHandler);
