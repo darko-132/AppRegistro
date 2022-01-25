@@ -13,14 +13,21 @@
         {{#if user}}
           <li class="nav-item">
           <a href="/ingreso">
-            <button type="button" class="btn btn-success">Add ingreso</button>
+            <button type="button" class="btn btn-success">Añadir registro</button>
           </a>
         </li>
       <ul class="navbar-nav ms-auto">
         <ul class="navbar-nav">
-          <li><a class="nav-link active All" href="/">All notes</a></li>
-          <li><a class="nav-link active btn btn-danger" href="/users/logout">Logout</a></li>
+          <li><a class="nav-link active All" href="/all">Todos los registros</a></li>
+          <div class="dropdown">
+      <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Opciones
+      </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="nav-link active btn btn-danger" href="/users/logout">Salir</a></li>
         </ul>
+        </div>
+            </ul>
       </ul>
         {{else}}
       <ul class="navbar-nav ms-auto">

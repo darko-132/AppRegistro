@@ -2,6 +2,10 @@ const router = require('express').Router();
 const Ingreso = require('../models/Ingreso');
 const {isAuthenticated} = require('../helper/auth');
 
+router.get('/', (req, res)=>{
+    res.render('home/home')
+})
+
 router.get('/ingreso', isAuthenticated, (req, res)=>{
     res.render('ingreso/ingreso.hbs')
 });
@@ -29,7 +33,7 @@ router.post('/ingreso/dinero' , async function(req, res){
           const userEmail = res.locals.user.email
           const newIngreso = new Ingreso({ dinero, description, valor, userId, userEmail});
           await newIngreso.save();
-          res.redirect('/') 
+          res.redirect('/all') 
       }
       if(dinero < 0){
           const valor= 'Egreso';
@@ -38,14 +42,14 @@ router.post('/ingreso/dinero' , async function(req, res){
           const newIngreso = new Ingreso({ dinero, description, valor, userId, userEmail});
           console.log(res.locals.user)
           await newIngreso.save();
-          res.redirect('/') 
+          res.redirect('/all') 
       }
 
     
   }
 
 });
-router.get('/', isAuthenticated, async (req, res)=>{
+router.get('/all', isAuthenticated, async (req, res)=>{
     try{
         /* const userId = res.locals.user.email */
         const name = res.locals.user.name;
@@ -68,12 +72,12 @@ router.get('/dinero/actualizar/:id', isAuthenticated, async(req, res)=>{
 router.put('/dinero/actualizar-dinero/:id', async(req, res)=>{
     const {dinero, description} = req.body;
     await Ingreso.findByIdAndUpdate(req.params.id, {dinero, description});
-    res.redirect('/')
+    res.redirect('/all')
 })
 
 router.get('/dinero/delete/:id', isAuthenticated, async(req, res)=>{
 await Ingreso.findByIdAndDelete(req.params.id);
-res.redirect('/')
+res.redirect('/all')
 });
     
 
