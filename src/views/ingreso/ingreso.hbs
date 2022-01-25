@@ -7,19 +7,21 @@
 <div class="col-md-4 mx-auto">
     <div class="card">
     <div class="card-header">
-        <h3>Nuevo ingreso</h3>
+        <h3>Nuevo registro</h3>
     </div>
     <div class="card-body">
         <form action="/ingreso/dinero" method="post">
             <div class="form-group">
-                <input type="number"  name="dinero" class="form-control" placeholder="Dinero a ingresar" autofocus>
+                <input type="number"  name="dinero" class="form-control" placeholder="Dinero" autofocus>
             </div>
+            <small>Si desea hacer un egreso coloque negatica (-) la cifra</small>
             <div class="form-group mt-2">
                 <textarea name="description" class="form-control" placeholder="Description" ></textarea>
             </div>
             <div class="form-group mt-2">
                 <button class="btn btn-primary btn-block" type="submit">Guardar</button>
             </div>
+            
         </form>
     </div>
 

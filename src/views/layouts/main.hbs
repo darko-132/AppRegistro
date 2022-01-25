@@ -14,8 +14,10 @@
   </head>
   <body>
     {{>navbar}}
-    
-    <main class="container "> 
+    <main class="container ">
+      {{#if name}}
+        <h5>Bienvenido: <span>{{name}}</span></h5>
+      {{/if}}
       {{>total}}
       {{>mensajes}}
       {{>errors}}
