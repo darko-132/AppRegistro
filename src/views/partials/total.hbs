@@ -1,19 +1,21 @@
-<div class="mt-4">   
-    {{#if allIngreso}}
-    <div class="d-flex">
-        
-        <div class="mb-2 mt-2">
-            <div class="mb-2 texto">Disponible:</div>
-            <div class="badge bg-success p-2">
-                <h4>{{ total }} $</h4>
+<div class="container">
+    <div class="mt-4">   
+        {{#if allIngreso}}
+        <div class="d-flex">
+            
+            <div class="mb-2 mt-2">
+                <div class="mb-2 texto">Disponible:</div>
+                <div class="badge bg-success p-2">
+                    <h4>{{ total }} $</h4>
+                </div>
             </div>
+            <div class="mb-2 mt-2 ms-auto texto">
+                <div class="mb-2">Saldo anterior:</div>
+                <div class="badge bg-secondary p-2">
+                    <h4>{{ anterior }} $</h4>
+                </div> 
+            </div>   
         </div>
-        <div class="mb-2 mt-2 ms-auto texto">
-            <div class="mb-2">Saldo anterior:</div>
-            <div class="badge bg-secondary p-2">
-                <h4>{{ anterior }} $</h4>
-            </div> 
-        </div>   
+        {{/if }}  
     </div>
-    {{/if }}  
 </div>

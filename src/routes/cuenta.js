@@ -55,9 +55,9 @@ router.get('/all', isAuthenticated, async (req, res)=>{
         const name = res.locals.user.name;
         const UserId = res.locals.user._id;
         const allIngreso = await Ingreso.find({userId: UserId}).sort({date: 'desc'}).lean();
-        const newArray = allIngreso.map(item => parseInt(item.dinero));
+        const newArray = allIngreso.map(item => parseFloat((item.dinero)));
         const total = newArray.reduce((a, b) => a + b, 0);
-        const anterior = total-parseInt(allIngreso[0].dinero);
+        const anterior = total-parseFloat(allIngreso[0].dinero);
         res.render('ingreso/todos.hbs', {allIngreso, total, anterior, name})
         }
         catch  {

@@ -1,23 +1,25 @@
-<div class="row targ">
-{{#each allIngreso}}
-    <div class="card m-2" style="width: 16.7rem;">
-    <div class="card-body">
-        <div>
-            <h4 class="card-title d-flex justify-content-between align-item-center">
-            <abbr title='{{date}}'>{{valor}}</abbr> <a href="/dinero/actualizar/{{_id}}"><i class="fas fa-edit"></i></a>
-            </h4>
-        </div>
-        <h6 class="card-subtitle mb-2 text-muted">{{dinero}}$</h6>
-        <p class="card-text" >{{description}}</p>
-        <a href="/dinero/delete/{{ _id }}" class="card-link"><button type="button" class="btn btn-danger">Eliminar</button></a>
+<div class="container">
+    <div class="row targ">
+        {{#each allIngreso}}
+            <div class="card m-2" style="width: 16.7rem;">
+            <div class="card-body">
+                <div>
+                    <h4 class="card-title d-flex justify-content-between align-item-center">
+                    <abbr title='{{date}}'>{{valor}}</abbr> <a href="/dinero/actualizar/{{_id}}"><i class="fas fa-edit"></i></a>
+                    </h4>
+                </div>
+                <h6 class="card-subtitle mb-2 text-muted">{{dinero}}$</h6>
+                <p class="card-text" >{{description}}</p>
+                <a href="/dinero/delete/{{ _id }}" class="card-link"><button type="button" class="btn btn-danger">Eliminar</button></a>
+            </div>
+            </div>
+            {{else }}
+            <div class="card mx-auto" style="width: 18rem;">
+                <div class='card-body'>
+                    <div class="lead card-title">Inserte Nota</div>
+                    <a href="/notes/add"  type="button" class="btn btn-success">Create One</a>
+                </div>
+            </div>
+        {{/each }}
     </div>
-    </div>
-    {{else }}
-    <div class="card mx-auto" style="width: 18rem;">
-        <div class='card-body'>
-            <div class="lead card-title">Inserte Nota</div>
-            <a href="/notes/add"  type="button" class="btn btn-success">Create One</a>
-        </div>
-    </div>
-{{/each }}
 </div>

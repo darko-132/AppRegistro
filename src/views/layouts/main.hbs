@@ -14,10 +14,12 @@
   </head>
   <body>
     {{>navbar}}
-    <main class="container ">
-      {{#if name}}
-        <h5>Bienvenido: <span>{{name}}</span></h5>
-      {{/if}}
+    <main class=" ">
+      <div class="container">
+        {{#if name}}
+          <h5 class="mt-3">Bienvenido: <span>{{name}}</span></h5>
+        {{/if}}
+      </div>
       {{>total}}
       {{>mensajes}}
       {{>errors}}

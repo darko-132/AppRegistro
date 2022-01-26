@@ -12,7 +12,7 @@
     <div class="card-body">
         <form action="/ingreso/dinero" method="post">
             <div class="form-group">
-                <input type="number"  name="dinero" class="form-control" placeholder="Dinero" autofocus>
+                <input type="number" min="0" step=".01" name="dinero" class="form-control" placeholder="Dinero" autofocus>
             </div>
             <small>Si desea hacer un egreso coloque negatica (-) la cifra</small>
             <div class="form-group mt-2">
