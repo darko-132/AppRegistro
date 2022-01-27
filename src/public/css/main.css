@@ -62,7 +62,7 @@ body{
     
 }
 .home-p{
-    padding: 8rem;
+    padding: 4rem 0;
     background-image: url("https://images.unsplash.com/photo-1531347334762-59780ece5c76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
     background-size: cover;
     background-repeat:no-repeat;
@@ -124,8 +124,8 @@ max-width: 70%;
         margin-top: 4rem;
     } */
     .titul{
-        margin: 3rem 0;
-        font-size: 3rem;
+        margin: 1rem 0;
+        font-size: 2rem;
     }
     .btn-regis{
         width: 50%;
